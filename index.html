@@ -21,8 +21,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
     
-    <script src="./src/utils/getProducts.js" type="module" defer></script>
-    <script src="./src/utils/getProductById.js" type="module" defer></script>
+    <script src="app.js" type="module" defer></script>
+    <script src="./src/utils/getBlogs.js" type="module" defer></script>
+    <script src="./src/utils/getBlogById.js" type="module" defer></script>
     
     <meta name="description" content="The homepage of FadeDisc.eu">
     <meta charset="UTF-8" />
@@ -33,16 +34,17 @@
   <body>
     <header>
         <div class="logo">
-            <img src="/Assets/Images/disc-logo.png" alt="The logo of FadeDisc.eu, it's an image of a frisbee disc">
+            <img class="logo-image" src="/Assets/Images/disc-logo.png" alt="The logo of FadeDisc.eu, it's an image of a frisbee disc">
+            <div class="line mobile"></div>
         </div>
-            <nav class="navbar">
+            <nav class="navbar mobile">
                 <div class="nav-links">
                     <a>Home</a>
-                    <img src="/Assets/Images/Line-mobile-header.png" alt="line to seperate nav links">
+                    <img class="nav-line" src="/Assets/Images/Line-mobile-header.png" alt="line to seperate nav links">
                     <a href="/blog-list/">Blogs</a>
-                    <img src="/Assets/Images/Line-mobile-header.png" alt="line to seperate nav links">
+                    <img class="nav-line" src="/Assets/Images/Line-mobile-header.png" alt="line to seperate nav links">
                     <a href="/About/">About</a>
-                    <img src="/Assets/Images/Line-mobile-header.png" alt="line to seperate nav links">
+                    <img class="nav-line" src="/Assets/Images/Line-mobile-header.png" alt="line to seperate nav links">
                     <a href="/Contact">Contact</a>
                 </div>
             </nav>

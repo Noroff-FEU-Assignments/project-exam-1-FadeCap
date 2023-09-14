@@ -1,4 +1,4 @@
-import getProductById from "./getProductById.js";
+import getBlogById from "./getBlogById.js";
 
 document.addEventListener("DOMContentLoaded", async () => {
   const productDetailContainer = document.getElementById("root");

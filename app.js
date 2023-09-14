@@ -1,63 +1,90 @@
-import getProducts from "./Src/Utils/getProducts.js";
+import getBlogs from "./Src/Utils/getBlogs.js";
 
 const root = document.getElementById("root");
 
-const createCard = (product) => {
-  const productContainer = document.createElement("div");
-  productContainer.classList.add("product-container");
-  
-  productContainer.dataset.productId = product.id;
+const mockBlogs = [
+  {
+    id: "1",
+    name: "Hiking Adventures in the Rockies",
+    text: "Join us on a thrilling journey through the breathtaking landscapes of the Rocky Mountains. Discover hidden trails, pristine lakes, and the untamed wilderness that awaits every hiker. Get ready for an unforgettable adventure in the heart of nature.",
+    images: [
+      { src: "https://picsum.photos/id/248/200/300" },
+      { src: "https://picsum.photos/id/238/200/300" },
+      { src: "https://picsum.photos/id/239/200/300" },
+    ],
+  },
+  {
+    id: "2",
+    name: "Culinary Delights from Around the World",
+    text: "Embark on a culinary world tour with us as we explore the diverse and delicious flavors of global cuisine. From mouthwatering street food in Bangkok to gourmet French pastries in Paris, our journey will tantalize your taste buds and broaden your culinary horizons.",
+    images: [
+      { src: "https://picsum.photos/id/240/200/300" },
+      { src: "https://picsum.photos/id/241/200/300" },
+    ],
+  },
+  {
+    id: "3",
+    name: "Photography Tips and Tricks",
+    text: "Unleash your inner photographer and capture stunning moments with our expert photography tips and tricks. From mastering the art of composition to understanding lighting techniques, we'll guide you on your path to becoming a photography pro.",
+    images: [
+      { src: "https://picsum.photos/id/242/200/300" },
+      { src: "https://picsum.photos/id/243/200/300" },
+    ],
+  },
+];
 
-  const productImage = document.createElement("img");
-  productImage.src = product.images[0].src;
-  productImage.classList.add("product-image");
+/* Creating a card for my blog posts */
+const createCard = (blog) => {
+  const articleElement = document.createElement("article");
+  articleElement.classList.add("article");
 
-  const productName = document.createElement("h2");
-  productName.textContent = product.name;
+  const blogContainer = document.createElement("div");
+  blogContainer.classList.add("blog-container");
 
-  const productPrice = document.createElement("p");
-  productPrice.textContent = "Price: " + product.price + " USD";
+  blogContainer.dataset.blogId = blog.id;
 
-  productContainer.appendChild(productImage);
-  productContainer.appendChild(productName);
-  productContainer.appendChild(productPrice);
+  const blogImage = document.createElement("img");
+  blogImage.src = blog.images[0].src;
+  blogImage.classList.add("blog-image");
 
-  return productContainer;
+  const blogName = document.createElement("h2");
+  blogName.textContent = blog.name;
+  blogName.classList.add("card-title")
+
+  const blogText = document.createElement("p");
+  blogText.textContent = blog.text;
+  blogText.classList.add("paragraph")
+
+  const readMoreBtn = document.createElement("button");
+  blogContainer.classList.add("read-more-btn");
+  readMoreBtn.textContent = "Read more...";
+
+  articleElement.appendChild(blogContainer);
+  blogContainer.appendChild(blogImage);
+  blogContainer.appendChild(blogName);
+  blogContainer.appendChild(blogText);
+  blogContainer.appendChild(readMoreBtn);
+
+  return articleElement;
 };
 
-const redirectToProductDetail = (productId) => {
-  window.location.href = `product-detail.html?id=${productId}`;
+const redirectToBlogDetail = (blogId) => {
+  window.location.href = `blog-detail.html?id=${blogId}`;
 };
 
-const renderProducts = async () => {
+/* Rendering Blog posts into html */
+const renderBlogs = async () => {
   try {
-    const products = await getProducts();
+    const blogs = await getBlogs();
 
-    const featured = document.createElement("div")
-    featured.classList.add("featured");
-    const gallery = document.createElement("div")
-    gallery.classList.add("gallery");
-    products.forEach((product) => {
-        const productCard = createCard(product);
-        productCard.addEventListener("click", () => {
-          const productId = product.id;
-          redirectToProductDetail(productId);
-        });
-        console.log(product.featured)
-        if (product.featured) {
-            featured.appendChild(productCard)
-        } else {
-            gallery.appendChild(productCard)
-        }
-    });
-        root.appendChild(featured);
-        root.appendChild(gallery);
+    for (let i = 0; i < mockBlogs.length; i++) {
+      const card = createCard(mockBlogs[i]);
+
+      root.appendChild(card);
+    }
   } catch (error) {
-    console.error("Error occurred while rendering products.\n", error);
+    console.error("Error occurred while rendering blogs.\n", error);
   }
 };
 
-
-
-renderProducts();
-
+renderBlogs();

@@ -4,10 +4,10 @@ const apiUrl = "fadedisc.eu/wp-json/wp/v2/posts/";
 
 
 
-const getProductById = async (id) => {
-  const productUrl = apiUrl + id
+const getBlogById = async (id) => {
+  const blogUrl = apiUrl + id
     try {
-        const response = await fetch(productUrl, {
+        const response = await fetch(blogUrl, {
         method:"GET",
         headers:{
             "Authorization": "Basic " + btoa(apiConsumerKey + ":" + apiConsumerSecret)
@@ -17,15 +17,14 @@ const getProductById = async (id) => {
         const {status, statusText, url} = response
         throw new Error(JSON.stringify({status, statusText, url}));
       }
-
-      const product = await response.json()
-      return product
+      const blog = await response.json()
+      return blog
     } catch (error) {
         console.error("Error occurred while trying to get a product.\n", error);
     }
 }
 
-export default getProductById;
+export default getBlogById;
 
 
 
