@@ -5,6 +5,7 @@ const root = document.getElementById("root");
 const mockBlogs = [
   {
     id: "1",
+    date: "2023-09-12T16:07:28",
     name: "Hiking Adventures in the Rockies",
     text: "Join us on a thrilling journey through the breathtaking landscapes of the Rocky Mountains. Discover hidden trails, pristine lakes, and the untamed wilderness that awaits every hiker. Get ready for an unforgettable adventure in the heart of nature.",
     images: [
@@ -15,6 +16,7 @@ const mockBlogs = [
   },
   {
     id: "2",
+    date: "2023-09-12T16:08:28",
     name: "Culinary Delights from Around the World",
     text: "Embark on a culinary world tour with us as we explore the diverse and delicious flavors of global cuisine. From mouthwatering street food in Bangkok to gourmet French pastries in Paris, our journey will tantalize your taste buds and broaden your culinary horizons.",
     images: [
@@ -24,6 +26,7 @@ const mockBlogs = [
   },
   {
     id: "3",
+    date: "2023-09-12T16:09:28",
     name: "Photography Tips and Tricks",
     text: "Unleash your inner photographer and capture stunning moments with our expert photography tips and tricks. From mastering the art of composition to understanding lighting techniques, we'll guide you on your path to becoming a photography pro.",
     images: [
