@@ -11,4 +11,11 @@
     padding: 0 2rem;
 }
 
+#name, 
+#email, 
+#subject,
+#message {
+    padding: 4px;
+}
+
 }
