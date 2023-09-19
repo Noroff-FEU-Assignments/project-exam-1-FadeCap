@@ -24,9 +24,9 @@ function validateForm() {
 
     if (errorMessages !== "") {
         document.getElementById("errorMessages").innerHTML = errorMessages;
-        return false; // Prevent form submission
+        return false;
     }
 
-    // If all validations pass, the form will be submitted
+
     return true;
 }

@@ -26,6 +26,7 @@
     <meta name="description" content="The contact page of FadeDisc.eu">
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="contact.css">
     <link rel="stylesheet" href="/Style/global.css">
     <title>FadeDisc | Contact</title>
   </head>
@@ -35,41 +36,43 @@
             <img src="/Assets/Images/disc-logo.png" alt="The logo of FadeDisc.eu, it's an image of a frisbee disc">
             <div class="line hidden-desktop"></div>
           </div>
-            <nav class="navbar">
-                <div class="nav-links">
-                    <a href="../">Home</a>
-                    <img src="/Assets/Images/Line-mobile-header.png" alt="line to seperate nav links">
-                    <a href="../Blog-list">Blogs</a>
-                    <img src="/Assets/Images/Line-mobile-header.png" alt="line to seperate nav links">
-                    <a href="../About">About</a>
-                    <img src="/Assets/Images/Line-mobile-header.png" alt="line to seperate nav links">
-                    <a>Contact</a>
-                </div>
-            </nav>
+            
         </header>
 
     <main>
-      <h1 class="contact-title">Contact Us</h1>
-      <form id="contactForm" class="blog-container" onsubmit="return validateForm()">
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required>
-        <br>
-        <label for="email">Email Address:</label>
-        <input type="email" id="email" name="email" required>
-        <br>
-        <label for="subject">Subject:</label>
-        <input type="text" id="subject" name="subject" required>
-        <br>
-        <label for="message">Message Content:</label>
-        <textarea id="message" name="message" required></textarea>
-        <br>
-        <input type="submit" value="Submit">
-      </form>
+      <div class="contact-container">
+        <h1 class="contact-title">Contact Us</h1>
+        <form id="contactForm" class="blog-container" onsubmit="return validateForm()">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required>
+          <br>
+          <label for="email">Email Address:</label>
+          <input type="email" id="email" name="email" required>
+          <br>
+          <label for="subject">Subject:</label>
+          <input type="text" id="subject" name="subject" required>
+          <br>
+          <label for="message">Message Content:</label>
+          <textarea id="message" name="message" required></textarea>
+          <br>
+          <input type="submit" value="Submit">
+        </form>
+      </div>
       
       <div id="errorMessages"></div>
     </main>
     <footer>
-
+      <nav class="navbar">
+        <div class="nav-links">
+            <a href="../">Home</a>
+            <img src="/Assets/Images/Line-mobile-header.png" alt="line to seperate nav links">
+            <a href="../Blog-list">Blogs</a>
+            <img src="/Assets/Images/Line-mobile-header.png" alt="line to seperate nav links">
+            <a href="../About">About</a>
+            <img src="/Assets/Images/Line-mobile-header.png" alt="line to seperate nav links">
+            <a>Contact</a>
+        </div>
+    </nav>
     </footer>
 
   </body>

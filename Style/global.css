@@ -13,7 +13,10 @@ body {
     rgba(132, 254, 255, 1) 0%,
     rgba(255, 230, 183, 1) 74%
   );
-  /* padding-bottom: 2.5rem; */
+  padding-bottom: 2.5rem;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  height: 100%;
 }
 
 button,
@@ -49,8 +52,8 @@ html {
 }
 
 main {
-  width: min(65ch, 100% - 2rem);
-  margin-inline: auto;
+  padding: 0 1rem;
+  padding-bottom: 2.5rem;
 }
 
 a {
@@ -90,6 +93,7 @@ img {
     color: red;
     margin: 2rem;
 }
+
 
 /* Media query for screens with a maximum width of 768px*/
 @media (max-width: 768px) {
@@ -170,5 +174,10 @@ img {
   }
 /* End of blog container styling */
 
+#message {
+    height: 5rem;
+    width: 14rem;
+    overflow: hidden;
+}
 
 }

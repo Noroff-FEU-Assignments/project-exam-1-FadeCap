@@ -1,0 +1,16 @@
+@media (max-width: 768px) {
+
+    .about {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .about-info-container {
+        min-width: 15rem;
+    }
+    
+    .about-image {
+        max-width: 15rem;
+    }
+}

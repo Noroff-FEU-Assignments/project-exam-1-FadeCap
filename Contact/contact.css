@@ -1,0 +1,14 @@
+
+@media (max-width: 768px) {
+
+.contact-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#contactForm {
+    padding: 0 2rem;
+}
+
+}
