@@ -21,7 +21,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
     
-    
+    <script src="/Src/Utils/contactValidation.js"></script>
+
     <meta name="description" content="The contact page of FadeDisc.eu">
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -32,7 +33,8 @@
     <header>
         <div class="logo">
             <img src="/Assets/Images/disc-logo.png" alt="The logo of FadeDisc.eu, it's an image of a frisbee disc">
-        </div>
+            <div class="line hidden-desktop"></div>
+          </div>
             <nav class="navbar">
                 <div class="nav-links">
                     <a href="../">Home</a>
@@ -47,7 +49,25 @@
         </header>
 
     <main>
-        <div id="root"></div>
+      <body>
+        <h1 class="contact-title">Contact Us</h1>
+        <form id="contactForm" class="blog-container" onsubmit="return validateForm()">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <br>
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" required>
+            <br>
+            <label for="subject">Subject:</label>
+            <input type="text" id="subject" name="subject" required>
+            <br>
+            <label for="message">Message Content:</label>
+            <textarea id="message" name="message" required></textarea>
+            <br>
+            <input type="submit" value="Submit">
+        </form>
+    
+        <div id="errorMessages" style="color: red;"></div>
     </main>
 
     <footer>

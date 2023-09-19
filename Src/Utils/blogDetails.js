@@ -17,9 +17,6 @@ document.addEventListener("DOMContentLoaded", async () => {
       const productName = document.createElement("h2");
       productName.textContent = product.name;
 
-      const productPrice = document.createElement("p");
-      productPrice.textContent = "Price: " + product.price + " USD";
-
       const productDescription = document.createElement("div");
       productDescription.innerHTML = product.description;
 
