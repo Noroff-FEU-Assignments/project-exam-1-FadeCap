@@ -13,7 +13,7 @@ body {
     rgba(132, 254, 255, 1) 0%,
     rgba(255, 230, 183, 1) 74%
   );
-  padding-bottom: 2.5rem;
+  /* padding-bottom: 2.5rem; */
 }
 
 button,
@@ -84,6 +84,11 @@ img {
 .contact-title {
     text-align: center;
     letter-spacing: 2px;
+}
+
+#errorMessages {
+    color: red;
+    margin: 2rem;
 }
 
 /* Media query for screens with a maximum width of 768px*/
