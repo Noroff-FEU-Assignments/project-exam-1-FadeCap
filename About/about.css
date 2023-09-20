@@ -1,9 +1,28 @@
+.about {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10rem;
+    padding-left: 5rem;
+}
+
+.about-info-container {
+    min-width: 15rem;
+}
+
+.about-image {
+    max-width: 20rem;
+    margin-bottom: 2rem;
+}
+
+
 @media (max-width: 768px) {
 
     .about {
         display: flex;
         flex-direction: column;
         align-items: center;
+        gap: 3rem;
     }
     
     .about-info-container {
@@ -12,5 +31,6 @@
     
     .about-image {
         max-width: 15rem;
+        margin-bottom: 1rem;
     }
 }

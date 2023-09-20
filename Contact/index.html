@@ -31,48 +31,72 @@
     <title>FadeDisc | Contact</title>
   </head>
   <body>
-    <header>
-        <div class="logo">
-            <img src="/Assets/Images/disc-logo.png" alt="The logo of FadeDisc.eu, it's an image of a frisbee disc">
-            <div class="line hidden-desktop"></div>
+    <header class="header">
+      <div class="logo">
+        <a href="index.html">
+          <img class="logo-image" src="/Assets/Images/disc-logo.png" alt="The logo of FadeDisc.eu, it's an image of a frisbee disc">
+        </a>
+          <div class="line hidden-desktop"></div>
+        </div>
+        <nav class="navbar">
+          <div class="nav-links">
+              <a class="nav-text" href="../">Home</a>
+              <img class="nav-line hidden-mobile" src="/Assets/Images/Line-mobile-header.png" alt=" mobile to seperate nav links">
+              <a class="nav-text" href="/blog-list/">Blogs</a>
+              <img class="nav-line hidden-mobile" src="/Assets/Images/Line-mobile-header.png" alt="line to seperate nav links">
+              <a class="nav-text" href="/About/">About</a>
+              <img class="nav-line hidden-mobile" src="/Assets/Images/Line-mobile-header.png" alt="line to seperate nav links">
+              <a class="nav-text">Contact</a>
           </div>
-            
-        </header>
+      </nav>
+          
+      </header>
 
     <main>
       <div class="contact-container">
-        <h1 class="contact-title">Contact Us</h1>
-        <form id="contactForm" class="blog-container" onsubmit="return validateForm()">
-          <label for="name">Name:</label>
-          <input type="text" id="name" name="name" required>
-          <br>
-          <label for="email">Email Address:</label>
-          <input type="email" id="email" name="email" required>
-          <br>
-          <label for="subject">Subject:</label>
-          <input type="text" id="subject" name="subject" required>
-          <br>
-          <label for="message">Message Content:</label>
-          <textarea id="message" name="message" required></textarea>
-          <br>
-          <input type="submit" value="Submit">
-        </form>
+        <h1>Contact Us</h1>
+     <form id="contactForm" class="blog-container" onsubmit="return validateForm()">
+         <label for="name">Name:</label>
+         <input type="text" id="name" name="name" required>
+         <br>
+         <div id="nameError" class="error"></div>
+ 
+         <label for="email">Email Address:</label>
+         <input type="email" id="email" name="email" required>
+         <br>
+         <div id="emailError" class="error"></div>
+ 
+         <label for="subject">Subject:</label>
+         <input type="text" id="subject" name="subject" required>
+         <br>
+         <div id="subjectError" class="error"></div>
+ 
+         <label for="message">Message Content:</label>
+         <textarea id="message" name="message" required></textarea>
+         <br>
+         <div id="messageError" class="error"></div>
+ 
+         <input type="submit" value="Submit">
       </div>
-      
-      <div id="errorMessages"></div>
     </main>
     <footer>
-      <nav class="navbar">
-        <div class="nav-links">
-            <a href="../">Home</a>
-            <img src="/Assets/Images/Line-mobile-header.png" alt="line to seperate nav links">
-            <a href="../Blog-list">Blogs</a>
-            <img src="/Assets/Images/Line-mobile-header.png" alt="line to seperate nav links">
-            <a href="../About">About</a>
-            <img src="/Assets/Images/Line-mobile-header.png" alt="line to seperate nav links">
-            <a>Contact</a>
+      <div class="social-icons-footer">
+        <div class="facebook social-logo">
+          <a href="https://www.facebook.com/">
+            <img class="social-icon" src="../Assets/Images/facebook-logo.svg" alt="Facebook logo">
+          </a>
         </div>
-    </nav>
+        <div class="instagram social-logo">
+          <a href="https://www.instagram.com">
+            <img class="social-icon" src="../Assets/Images/instagram-logo.svg" alt="Instagram logo">
+          </a>
+        </div>
+        <div class="x-twitter social-logo">
+          <a href="https://www.twitter.com">
+            <img class="social-icon" src="../Assets/Images/x-twitter-logo.svg" alt="X logo (twitter)">
+          </a>
+        </div>
+      </div>
     </footer>
 
   </body>
