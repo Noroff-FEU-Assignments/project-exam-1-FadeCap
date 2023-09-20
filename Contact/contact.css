@@ -1,48 +1,44 @@
 .contact-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 #contactForm {
-    padding: 0 2rem;
+  padding: 0 2rem;
 }
 
-#name, 
-#email, 
+#name,
+#email,
 #subject,
 #message {
-    padding: 8px;
+  padding: 8px;
 }
 
 #message {
-    height: 5rem;
-    width: 14rem;
+  height: 5rem;
+  width: 14rem;
 }
 
 .error {
-    color: red;
+  color: red;
 }
 
-
-
 @media (max-width: 768px) {
-
-.contact-container {
+  .contact-container {
     display: flex;
     flex-direction: column;
     align-items: center;
-}
+  }
 
-#contactForm {
+  #contactForm {
     padding: 0 2rem;
-}
+  }
 
-#name, 
-#email, 
-#subject,
-#message {
+  #name,
+  #email,
+  #subject,
+  #message {
     padding: 4px;
-}
-
+  }
 }

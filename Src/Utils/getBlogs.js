@@ -5,15 +5,16 @@ const apiUrl = "https://fadedisc.eu/wp-json/wp/v2/posts/";
 const getBlogs = async () => {
   try {
     const response = await fetch(apiUrl, {
-      method:"GET",
-      headers:{
-        "Authorization": "Basic " + btoa(apiConsumerKey + ":" + apiConsumerSecret)
-      }
+      method: "GET",
+      headers: {
+        Authorization:
+          "Basic " + btoa(apiConsumerKey + ":" + apiConsumerSecret),
+      },
     });
 
     if (!response.ok) {
-      const {status, statusText, url} = response
-      throw new Error(JSON.stringify({status, statusText, url}));
+      const { status, statusText, url } = response;
+      throw new Error(JSON.stringify({ status, statusText, url }));
     }
 
     const blogs = await response.json();
@@ -21,6 +22,6 @@ const getBlogs = async () => {
   } catch (error) {
     console.error("Error occurred while trying to get blogs.\n", error);
   }
-}; 
+};
 
 export default getBlogs;

@@ -25,7 +25,10 @@ document.addEventListener("DOMContentLoaded", async () => {
       productDetailContainer.appendChild(productPrice);
       productDetailContainer.appendChild(productDescription);
     } catch (error) {
-      console.error("Error occurred while trying to get product detail.\n", error);
+      console.error(
+        "Error occurred while trying to get product detail.\n",
+        error
+      );
     }
   };
 

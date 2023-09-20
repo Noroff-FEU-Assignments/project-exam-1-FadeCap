@@ -52,11 +52,11 @@ const createCard = (blog) => {
 
   const blogName = document.createElement("h2");
   blogName.textContent = blog.name;
-  blogName.classList.add("card-title")
+  blogName.classList.add("card-title");
 
   const blogText = document.createElement("p");
   blogText.textContent = blog.text;
-  blogText.classList.add("paragraph")
+  blogText.classList.add("paragraph");
 
   const readMoreBtn = document.createElement("button");
   blogContainer.classList.add("read-more-btn");
