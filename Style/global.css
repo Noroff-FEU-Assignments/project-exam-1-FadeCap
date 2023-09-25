@@ -25,19 +25,13 @@ body {
   align-items: center;
   justify-content: center;
   margin: 1rem;
-  padding: 1rem;
-  gap: 4rem;
-}
-
-.logo {
-  display: fixed;
-  width: 130px;
-  height: 100px;
+  padding: 2rem 0;
+  gap: 3rem;
 }
 
 .logo-image {
-  min-width: 130px;
-  min-height: 100px;
+  width: 5rem;
+  height: 4rem;
 }
 
 button,
@@ -93,11 +87,11 @@ a {
   color: white;
 }
 
-img {
+/* img {
   max-width: 100%;
   display: block;
   border-radius: 8px;
-}
+} */
 
 .card-title {
   letter-spacing: 2px;

@@ -13,6 +13,7 @@
 .about-image {
   max-width: 20rem;
   margin-bottom: 2rem;
+  border-radius: 8px;
 }
 
 @media (max-width: 768px) {

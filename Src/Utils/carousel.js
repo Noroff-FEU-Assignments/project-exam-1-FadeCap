@@ -15,10 +15,12 @@ function createCarouselCard(post) {
   card.classList.add('carousel-slide');
 
   const carouselImage = document.createElement('img');
+  carouselImage.classList.add('carousel-image');
   carouselImage.src = post.image;
   
-  // console.log("Post image:", post.image)
+  console.log("Post image:", post.image)
   const carouselTitle = document.createElement('h2');
+  carouselTitle.classList.add('carousel-title')
   carouselTitle.textContent = post.title
 
 
@@ -70,7 +72,6 @@ nextBtn.addEventListener('click', () => {
 
 
 getBlogs().then((posts) => {
-  // console.log("THIS ONE:", posts[0].image)
   renderBlogPosts(posts);
   updateSlideVisibility();
 });
