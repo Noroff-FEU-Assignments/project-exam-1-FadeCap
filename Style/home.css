@@ -53,9 +53,9 @@
   }
   
   .carousel-slide {
-    flex: 0 0 25%; /* Display 4 slides at a time, adjust as needed */
-    padding: 10px; /* Add spacing between slides */
-    box-sizing: border-box;
+   display: flex;
+   flex-direction: column;
+   width: 100%;
   }
   
   .carousel-btn {
