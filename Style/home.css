@@ -1,0 +1,110 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+.home-card-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  max-width: 1200px;
+  gap: 3rem;
+}
+
+
+
+.home-image {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 8px 0 0 8px; 
+}
+
+.home-card-text {
+  letter-spacing: 1px;
+  width: 70%;
+  padding: 3rem;
+}
+
+.home-card-title {
+  margin-top: 0; /* Remove default margin for <h2> */
+  letter-spacing: 2px;
+  margin: 2rem 0;
+}
+
+
+/* Carousel Start */
+.carousel-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .carousel {
+    display: flex;
+    overflow: hidden;
+    width: 80%; /* Adjust as needed */
+  }
+  
+  .carousel-slide {
+    flex: 0 0 25%; /* Display 4 slides at a time, adjust as needed */
+    padding: 10px; /* Add spacing between slides */
+    box-sizing: border-box;
+  }
+  
+  .carousel-btn {
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+  
+  .prev-btn {
+    margin-right: 10px;
+  }
+  
+  .next-btn {
+    margin-left: 10px;
+  }
+
+/* Carousel End */
+
+@media (max-width: 768px) {
+ 
+  .hidden-mobile {
+    display: none;
+  }
+ 
+  .home-card-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    max-width: 400px
+  }
+  
+  .home-image {
+  border-radius: 8px 8px 0 0;
+  }
+  
+  .home-card-text {
+    letter-spacing: 1px;
+    margin-bottom: 3rem;
+    padding: 0;
+  }
+  
+  .home-card-title {
+    margin-top: 0;
+    letter-spacing: 2px;
+    margin: 2rem 0;
+  }
+}
