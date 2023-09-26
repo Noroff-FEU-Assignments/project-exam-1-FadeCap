@@ -16,6 +16,7 @@ const getBlogById = async (id) => {
       const { status, statusText, url } = response;
       throw new Error(JSON.stringify({ status, statusText, url }));
     }
+    
     const blog = await response.json();
     return blog;
   } catch (error) {

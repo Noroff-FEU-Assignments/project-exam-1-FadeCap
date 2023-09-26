@@ -22,7 +22,7 @@ function createCarouselCard(post) {
   
   const carouselTitle = document.createElement('h2');
   carouselTitle.classList.add('carousel-title')
-  carouselTitle.textContent = post.title.normalize('NFC')
+  carouselTitle.innerHTML = post.title
 
 
 

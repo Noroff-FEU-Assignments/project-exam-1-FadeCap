@@ -39,11 +39,13 @@ const getBlogs = async () => {
       blogData[i].altText = await data.alt_text;
       blogData[i].image = await data.source_url;
     }
-
+    console.log("blog data:", blogData)
     return await blogData;
   } catch (error) {
     console.error("Error occurred while trying to get blogs.\n", error);
   }
 };
 
+
 export default getBlogs;
+

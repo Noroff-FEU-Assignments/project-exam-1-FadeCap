@@ -1,36 +1,40 @@
 import getBlogById from "./getBlogById.js";
 
 document.addEventListener("DOMContentLoaded", async () => {
-  const productDetailContainer = document.getElementById("root");
+  const blogDetailContainer = document.getElementById("blog-detail-container");
 
   const urlParams = new URLSearchParams(window.location.search);
-  const productId = urlParams.get("id");
+  const blogId = urlParams.get("id");
 
-  const renderProductDetail = async (productId) => {
+  const renderBlogDetail = async (blogId) => {
     try {
-      const product = await getProductById(productId);
+      const blog = await getBlogById(blogId);
+      
 
-      const productImage = document.createElement("img");
-      productImage.src = product.images[0].src;
-      productImage.classList.add("product-image");
+      blogDetailContainer.dataset.blogId = blog;
 
-      const productName = document.createElement("h2");
-      productName.textContent = product.name;
+      const blogImage = document.createElement("img");
+      blogImage.src = blog.image;
+      blogImage.classList.add("blog-image");
 
-      const productDescription = document.createElement("div");
-      productDescription.innerHTML = product.description;
+      const blogName = document.createElement("h2");
+      blogName.textContent = blog.title;
 
-      productDetailContainer.appendChild(productImage);
-      productDetailContainer.appendChild(productName);
-      productDetailContainer.appendChild(productPrice);
-      productDetailContainer.appendChild(productDescription);
+      const blogDescription = document.createElement("div");
+      blogDescription.innerHTML = blog.description;
+
+      blogDetailContainer.appendChild(blogImage);
+      blogDetailContainer.appendChild(blogName);
+      blogDetailContainer.appendChild(blogDescription);
+
+      console.log(blog)
     } catch (error) {
       console.error(
-        "Error occurred while trying to get product detail.\n",
+        "Error occurred while trying to get blog detail.\n",
         error
       );
     }
   };
 
-  renderProductDetail(productId);
+  renderBlogDetail(blogId);
 });

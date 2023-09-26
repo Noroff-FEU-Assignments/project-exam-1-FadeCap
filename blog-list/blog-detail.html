@@ -25,8 +25,8 @@
       rel="stylesheet"
     />
 
-    <script src="../src/utils/getProducts.js" type="module" defer></script>
-    <script src="../src/utils/getProductById.js" type="module" defer></script>
+    <script src="../src/utils/getBlogById.js" type="module" defer></script>
+    <script src="../Src/Utils/blogDetails.js" type="module"></script>
 
     <meta name="description" content="Specific blog on FadeDisc" />
     <meta charset="UTF-8" />
@@ -35,37 +35,44 @@
     <title>FadeDisc | Blog</title>
   </head>
   <body>
-    <header>
+    <header class="header">
       <div class="logo">
-        <img
-          src="/Assets/Images/disc-logo.png"
-          alt="The logo of FadeDisc.eu, it's an image of a frisbee disc"
-        />
+        <a href="/">
+          <img
+            class="logo-image"
+            src="/Assets/Images/disc-logo.png"
+            alt="The logo of FadeDisc.eu, it's an image of a frisbee disc"
+          />
+        </a>
+        <div class="line hidden-desktop"></div>
       </div>
       <nav class="navbar">
         <div class="nav-links">
-          <a href="../">Home</a>
+          <a href="../" class="nav-text">Home</a>
           <img
+            class="nav-line hidden-mobile"
+            src="/Assets/Images/Line-mobile-header.png"
+            alt=" mobile to seperate nav links"
+          />
+          <a class="nav-text">Blogs</a>
+          <img
+            class="nav-line hidden-mobile"
             src="/Assets/Images/Line-mobile-header.png"
             alt="line to seperate nav links"
           />
-          <a href="../Blog-list">Blogs</a>
+          <a class="nav-text" href="/About/">About</a>
           <img
+            class="nav-line hidden-mobile"
             src="/Assets/Images/Line-mobile-header.png"
             alt="line to seperate nav links"
           />
-          <a href="../About">About</a>
-          <img
-            src="/Assets/Images/Line-mobile-header.png"
-            alt="line to seperate nav links"
-          />
-          <a href="../Contact">Contact</a>
+          <a class="nav-text" href="/Contact">Contact</a>
         </div>
       </nav>
     </header>
 
     <main>
-      <div id="product-detail-container"></div>
+      <div id="blog-detail-container"></div>
     </main>
 
     <footer></footer>
