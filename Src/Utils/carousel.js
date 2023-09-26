@@ -3,6 +3,7 @@ import getBlogs from './getBlogs.js';
 const prevBtn = document.querySelector('#prev-btn');
 const nextBtn = document.querySelector('#next-btn');
 const carousel = document.querySelector('.carousel');
+carousel.innerHTML = '<img src="../../Assets/Images/Ripple-loader.svg"/>'
 
 // Set initial slide index and posts per page
 let currentSlide = 0;
@@ -21,7 +22,7 @@ function createCarouselCard(post) {
   
   const carouselTitle = document.createElement('h2');
   carouselTitle.classList.add('carousel-title')
-  carouselTitle.textContent = post.title
+  carouselTitle.textContent = post.title.normalize('NFC')
 
 
 
@@ -33,6 +34,7 @@ function createCarouselCard(post) {
 }
 
 function renderBlogPosts(posts) {
+  
   allPosts = posts
   const cards = posts
     .slice(currentSlide, currentSlide + postsPerPage)
@@ -58,7 +60,6 @@ function updateSlideVisibility() {
 
 // Event listener for the previous button
 prevBtn.addEventListener('click', () => {
-  console.log(currentSlide)
   if (currentSlide > 0) {
     currentSlide -= postsPerPage;
     renderBlogPosts(allPosts);
@@ -70,7 +71,6 @@ prevBtn.addEventListener('click', () => {
 
 // Event listener for the next button
 nextBtn.addEventListener('click', () => {
-  console.log("72.6", currentSlide)
   if (currentSlide + postsPerPage < allPosts.length) {
 
     currentSlide += postsPerPage;

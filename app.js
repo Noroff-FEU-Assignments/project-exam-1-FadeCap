@@ -47,15 +47,15 @@ const createCard = (blog) => {
   blogContainer.dataset.blogId = blog.id;
 
   const blogImage = document.createElement("img");
-  blogImage.src = blog.images[0].src;
+  blogImage.src = blog.image;
   blogImage.classList.add("blog-image");
 
   const blogName = document.createElement("h2");
-  blogName.textContent = blog.name;
+  blogName.textContent = blog.title;
   blogName.classList.add("card-title");
 
   const blogText = document.createElement("p");
-  blogText.textContent = blog.text;
+  blogText.textContent = blog.description.replace( /(<([^>]+)>)/ig, '').replace(/[^\x00-\x7F]+/g, '').replace(/&#8217;/g, "'");
   blogText.classList.add("paragraph");
 
   const readMoreBtn = document.createElement("button");
@@ -80,8 +80,8 @@ const renderBlogs = async () => {
   try {
     const blogs = await getBlogs();
 
-    for (let i = 0; i < mockBlogs.length; i++) {
-      const card = createCard(mockBlogs[i]);
+    for (let i = 0; i < blogs.length; i++) {
+      const card = createCard(blogs[i]);
 
       root.appendChild(card);
     }

@@ -42,6 +42,8 @@
   display: flex;
   gap: 2rem;
   padding: 2rem;
+  min-width: 1250px;
+  justify-content: space-between;
 }
 .carousel {
   display: flex;
