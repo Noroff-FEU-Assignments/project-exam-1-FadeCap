@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
       const blogName = document.createElement("h2");
       blogName.classList.add("blog-title-specific");
-      blogName.textContent = blog.title;
+      blogName.innerHTML = blog.title;
 
       const blogContent = document.createElement("div");
       blogContent.classList.add("blog-content-specific");
@@ -36,7 +36,6 @@ document.addEventListener("DOMContentLoaded", async () => {
       blogDetailContainer.appendChild(blogName);
       blogDetailContainer.appendChild(blogContent);
 
-      console.log(blog);
     } catch (error) {
       console.error("Error occurred while trying to get blog detail.\n", error);
     }

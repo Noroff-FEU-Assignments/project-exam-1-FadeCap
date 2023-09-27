@@ -83,11 +83,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   };
 
   const loadMoreBlogs = () => {
-    for (
-      let i = displayedBlogs;
-      i < Math.min(totalBlogs, displayedBlogs + 2);
-      i++
-    ) {
+    for (let i = displayedBlogs; i < Math.min(totalBlogs, displayedBlogs + 2); i++) {
       const card = createCard(blogs[i]);
       root.appendChild(card);
       displayedBlogs++;
