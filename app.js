@@ -3,7 +3,8 @@ import getBlogs from "./Src/Utils/getBlogs.js";
 document.addEventListener("DOMContentLoaded", async () => {
   const root = document.getElementById("root");
   const loadMoreBtn = document.createElement("button");
-  loadMoreBtn.textContent = "Load More";
+  loadMoreBtn.classList.add("load-more-btn");
+  loadMoreBtn.textContent = "Load More...";
 
   // Loader
   const loaderImage = new Image();
@@ -83,7 +84,11 @@ document.addEventListener("DOMContentLoaded", async () => {
   };
 
   const loadMoreBlogs = () => {
-    for (let i = displayedBlogs; i < Math.min(totalBlogs, displayedBlogs + 2); i++) {
+    for (
+      let i = displayedBlogs;
+      i < Math.min(totalBlogs, displayedBlogs + 2);
+      i++
+    ) {
       const card = createCard(blogs[i]);
       root.appendChild(card);
       displayedBlogs++;

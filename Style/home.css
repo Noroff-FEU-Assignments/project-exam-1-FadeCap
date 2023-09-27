@@ -54,12 +54,19 @@
 
 
 .carousel-slide {
-  border-radius: 8px;
-  gap: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
   border-radius: 8px;
   width: 200px;
-  height: 338px;
+  height: 370px;
+  text-align: center;
+  gap: 10px;
+}
+
+.carousel-btn {
+  box-shadow: none;
 }
 
 .carousel-image {
@@ -75,6 +82,7 @@
   padding: 0 1rem;
   text-align: center;
   letter-spacing: 1px;
+  font-weight: 600;
 }
 
 /* Carousel End */

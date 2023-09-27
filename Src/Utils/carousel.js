@@ -60,7 +60,7 @@ function updateSlideVisibility() {
   const slides = document.querySelectorAll('.carousel-slide');
   slides.forEach((slide, index) => {
     if (index >= currentSlide && index < currentSlide + postsPerPage) {
-      slide.style.display = 'block';
+      slide.style.display = 'flex';
     } else {
       slide.style.display = 'none';
     }
