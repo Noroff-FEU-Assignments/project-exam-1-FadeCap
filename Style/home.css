@@ -42,7 +42,6 @@
   display: flex;
   gap: 2rem;
   padding: 2rem;
-  min-width: 1250px;
   justify-content: space-between;
 }
 .carousel {
@@ -59,8 +58,8 @@
   gap: 1rem;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
   border-radius: 8px;
-  width: 300px;
-  height: 300px;
+  width: 200px;
+  height: 338px;
 }
 
 .carousel-image {

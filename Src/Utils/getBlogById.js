@@ -16,11 +16,32 @@ const getBlogById = async (id) => {
       const { status, statusText, url } = response;
       throw new Error(JSON.stringify({ status, statusText, url }));
     }
-    
-    const blog = await response.json();
-    return blog;
+    const data = await response.json();
+    const blogData = {
+      id: data.id,
+      date: data.date,
+      title: data.title.rendered,
+      content: data.content.rendered,
+      mediaLink: data._links["wp:featuredmedia"][0].href,
+      description: data.excerpt.rendered,
+    };
+
+    const mediaUrl = await fetch(blogData.mediaLink, {
+      method: "GET",
+      headers: {
+        Authorization:
+          "Basic " + btoa(apiConsumerKey + ":" + apiConsumerSecret),
+      },
+    });
+    const mediaData = await mediaUrl.json();
+
+    blogData.altText = mediaData.alt_text;
+    blogData.image = mediaData.source_url;
+
+    return blogData;
   } catch (error) {
-    console.error("Error occurred while trying to get a product.\n", error);
+    console.error("Error occurred while trying to get a blog.\n", error);
+    throw error;
   }
 };
 

@@ -1,7 +1,7 @@
 import getBlogs from "./Src/Utils/getBlogs.js";
 
 const root = document.getElementById("root");
-root.innerHTML = '<img src="../../Assets/Images/Ripple-loader-big.svg"/>'
+root.innerHTML = '<img class="big-loader" src="../../Assets/Images/Ripple-loader-big.svg"/>'
 
 const redirectToBlogDetail = (blogId) => {
   window.location.href = `blog-detail.html?id=${blogId}`;
@@ -27,10 +27,10 @@ const createCard = (blog) => {
 
   const blogText = document.createElement("p");
   blogText.innerHTML = blog.description
-  blogText.classList.add("paragraph");
+  blogText.classList.add("card-paragraph");
 
   const readMoreBtn = document.createElement("button");
-  blogContainer.classList.add("read-more-btn");
+  readMoreBtn.classList.add("read-more-btn");
   readMoreBtn.textContent = "Read more...";
   readMoreBtn.addEventListener("click", () => {
     const blogId = blog.id;

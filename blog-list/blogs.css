@@ -1,0 +1,20 @@
+#root {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#root.container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.card-title {
+    font-size: 1rem;
+}
+
+
+.card-paragraph {
+    overflow: hidden;
+}

@@ -9,9 +9,8 @@ document.addEventListener("DOMContentLoaded", async () => {
   const renderBlogDetail = async (blogId) => {
     try {
       const blog = await getBlogById(blogId);
-      
 
-      blogDetailContainer.dataset.blogId = blog;
+      blogDetailContainer.dataset.blogId = blog.id;
 
       const blogImage = document.createElement("img");
       blogImage.src = blog.image;
@@ -27,12 +26,9 @@ document.addEventListener("DOMContentLoaded", async () => {
       blogDetailContainer.appendChild(blogName);
       blogDetailContainer.appendChild(blogDescription);
 
-      console.log(blog)
+      console.log(blog);
     } catch (error) {
-      console.error(
-        "Error occurred while trying to get blog detail.\n",
-        error
-      );
+      console.error("Error occurred while trying to get blog detail.\n", error);
     }
   };
 
