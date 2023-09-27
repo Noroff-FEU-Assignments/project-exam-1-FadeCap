@@ -3,9 +3,11 @@ import getBlogs from './getBlogs.js';
 const prevBtn = document.querySelector('#prev-btn');
 const nextBtn = document.querySelector('#next-btn');
 const carousel = document.querySelector('.carousel');
+
+// Loader - Removes itself when the blog posts are loaded
 carousel.innerHTML = '<img src="../../Assets/Images/Ripple-loader.svg"/>'
 
-// Set initial slide index and posts per page
+
 let currentSlide = 0;
 const postsPerPage = 4;
 let allPosts = [];
@@ -24,10 +26,18 @@ function createCarouselCard(post) {
   carouselTitle.classList.add('carousel-title')
   carouselTitle.innerHTML = post.title
 
+  const readMoreBtn = document.createElement('button');
+  readMoreBtn.classList.add('read-more-btn');
+  readMoreBtn.textContent = 'Read more...';
+  readMoreBtn.addEventListener('click', () => {
+    window.location.href = `./blog-list/blog-detail.html?id=${post.id}`;
+  });
+
 
 
   card.appendChild(carouselImage);
   card.appendChild(carouselTitle);
+  card.appendChild(readMoreBtn);
   
 
   return card;
@@ -46,7 +56,6 @@ function renderBlogPosts(posts) {
   });
 }
 
-// Function to update the visibility of slides
 function updateSlideVisibility() {
   const slides = document.querySelectorAll('.carousel-slide');
   slides.forEach((slide, index) => {

@@ -1,64 +1,74 @@
 import getBlogs from "./Src/Utils/getBlogs.js";
 
-const root = document.getElementById("root");
-root.innerHTML = '<img class="big-loader" src="../../Assets/Images/Ripple-loader-big.svg"/>'
+document.addEventListener("DOMContentLoaded", async () => {
+  const root = document.getElementById("root");
 
-const redirectToBlogDetail = (blogId) => {
-  window.location.href = `blog-detail.html?id=${blogId}`;
-};
+  // Loader
+  const loaderImage = new Image();
+  loaderImage.classList.add("big-loader");
+  loaderImage.src = "../../Assets/Images/Ripple-loader-big.svg";
+  root.appendChild(loaderImage);
 
-/* Creating a card for my blog posts */
-const createCard = (blog) => {
-  const articleElement = document.createElement("article");
-  articleElement.classList.add("article");
+  const redirectToBlogDetail = (blogId) => {
+    window.location.href = `blog-detail.html?id=${blogId}`;
+  };
 
-  const blogContainer = document.createElement("div");
-  blogContainer.classList.add("blog-container");
+  // Loader end
 
-  blogContainer.dataset.blogId = blog.id;
+  const createCard = (blog) => {
+    const articleElement = document.createElement("article");
+    articleElement.classList.add("article");
 
-  const blogImage = document.createElement("img");
-  blogImage.src = blog.image;
-  blogImage.classList.add("blog-image");
+    const blogContainer = document.createElement("div");
+    blogContainer.classList.add("blog-container");
 
-  const blogName = document.createElement("h2");
-  blogName.innerHTML = blog.title;
-  blogName.classList.add("card-title");
+    blogContainer.dataset.blogId = blog.id;
 
-  const blogText = document.createElement("p");
-  blogText.innerHTML = blog.description
-  blogText.classList.add("card-paragraph");
+    const blogImage = document.createElement("img");
+    blogImage.src = blog.image;
+    blogImage.classList.add("blog-image");
 
-  const readMoreBtn = document.createElement("button");
-  readMoreBtn.classList.add("read-more-btn");
-  readMoreBtn.textContent = "Read more...";
-  readMoreBtn.addEventListener("click", () => {
-    const blogId = blog.id;
-    redirectToBlogDetail(blogId)
-  })
+    const blogName = document.createElement("h2");
+    blogName.innerHTML = blog.title;
+    blogName.classList.add("card-title");
 
-  articleElement.appendChild(blogContainer);
-  blogContainer.appendChild(blogImage);
-  blogContainer.appendChild(blogName);
-  blogContainer.appendChild(blogText);
-  blogContainer.appendChild(readMoreBtn);
+    const blogText = document.createElement("p");
+    blogText.innerHTML = blog.description;
+    blogText.classList.add("card-paragraph");
 
-  return articleElement;
-};
+    const readMoreBtn = document.createElement("button");
+    readMoreBtn.classList.add("read-more-btn");
+    readMoreBtn.textContent = "Read more...";
+    readMoreBtn.addEventListener("click", () => {
+      const blogId = blog.id;
+      redirectToBlogDetail(blogId);
+    });
 
-/* Rendering Blog posts into html */
-const renderBlogs = async () => {
-  try {
-    const blogs = await getBlogs();
+    articleElement.appendChild(blogContainer);
+    blogContainer.appendChild(blogImage);
+    blogContainer.appendChild(blogName);
+    blogContainer.appendChild(blogText);
+    blogContainer.appendChild(readMoreBtn);
 
-    for (let i = 0; i < blogs.length; i++) {
-      const card = createCard(blogs[i]);
+    return articleElement;
+  };
 
-      root.appendChild(card);
+  const renderBlogs = async () => {
+    try {
+      const blogs = await getBlogs();
+
+      // Remove Loader
+      root.removeChild(loaderImage);
+
+      for (let i = 0; i < blogs.length; i++) {
+        const card = createCard(blogs[i]);
+
+        root.appendChild(card);
+      }
+    } catch (error) {
+      console.error("Error occurred while rendering blogs.\n", error);
     }
-  } catch (error) {
-    console.error("Error occurred while rendering blogs.\n", error);
-  }
-};
+  };
 
-renderBlogs();
+  renderBlogs();
+});
