@@ -18,17 +18,21 @@
       })(window, document, "https://static.hotjar.com/c/hotjar-", ".js?sv=");
     </script>
     <!-- End of Hotjar Tracking Code for Project-Exam-Semester-1-Stian -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;900&display=swap"
+      rel="stylesheet"
+    />
 
-    <!-- <script src="app.js" type="module"></script> -->
+
     <script src="Src/Utils/carousel.js" type="module"></script>
+    <script src="Src/Utils/scrollToTopBtn.js" type="module"></script>
 
     <meta name="description" content="The homepage of FadeDisc.eu" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/Style/home.css">
+    <link rel="stylesheet" href="/Style/home.css" />
     <link rel="stylesheet" href="/Style/global.css" />
     <title>FadeDisc | Home</title>
   </head>
@@ -70,24 +74,45 @@
 
     <main class="main">
       <div class="home-card-container">
-          <img src="Assets/Images/disc-golf.jpg" class="home-image" alt="A disc golf player throwing a disk from a tee">
+        <img
+          src="Assets/Images/disc-golf.jpg"
+          class="home-image"
+          alt="A disc golf player throwing a disk from a tee"
+        />
         <div class="home-card-text">
           <h2 class="home-card-title">FadeDisc</h2>
-          <p>Welcome to FadeDisc.eu, your premier online hub for all things Disc Golf! Dive into the world of disc golf with us as we explore the latest news, share insightful tips and tricks, review top-notch equipment, and take you on a journey through the vibrant disc golf community. Whether you're an avid player seeking to elevate your game or a newcomer looking to learn the ropes, our blog is your go-to resource. Stay tuned for engaging content that celebrates the beauty of disc golf and helps you become a better player while fostering a sense of unity among fellow enthusiasts. Get ready to tee off on a disc golf adventure with us!</p>
+          <p>
+            Welcome to FadeDisc.eu, your premier online hub for all things Disc
+            Golf! Dive into the world of disc golf with us as we explore the
+            latest news, share insightful tips and tricks, review top-notch
+            equipment, and take you on a journey through the vibrant disc golf
+            community. Whether you're an avid player seeking to elevate your
+            game or a newcomer looking to learn the ropes, our blog is your
+            go-to resource. Stay tuned for engaging content that celebrates the
+            beauty of disc golf and helps you become a better player while
+            fostering a sense of unity among fellow enthusiasts. Get ready to
+            tee off on a disc golf adventure with us!
+          </p>
         </div>
       </div>
 
-      <div id="root"></div>
-
       <!-- Carousel start -->
-<section class="carousel-section hidden-mobile">
-  <div class="carousel-container">
-    <button class="carousel-btn prev-btn" id="prev-btn"><img src="Assets/Images/left-arrow.svg" alt="Left arrow"></button>
-    <div class="carousel"></div>
-    <button class="carousel-btn next-btn" id="next-btn"><img src="Assets/Images/right-arrow.svg" alt="Right arrow"></button>
-  </div>
-</section>
+      <section class="carousel-section hidden-mobile">
+        <div class="carousel-container">
+          <button class="carousel-btn prev-btn" id="prev-btn">
+            <img src="Assets/Images/left-arrow.svg" alt="Left arrow" />
+          </button>
+          <div class="carousel"></div>
+          <button class="carousel-btn next-btn" id="next-btn">
+            <img src="Assets/Images/right-arrow.svg" alt="Right arrow" />
+          </button>
+        </div>
+      </section>
       <!-- Carousel end -->
+
+      <!-- Back to top button -->
+      <button class="scrollToTopBtn"><img class="to-top-arrow" src="/Assets/Images/scroll-to-top-button-arrow.svg" alt="Scroll to top button"></button>
+      
     </main>
 
     <footer>
