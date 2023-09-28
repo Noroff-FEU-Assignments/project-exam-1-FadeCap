@@ -12,9 +12,10 @@ document.addEventListener("DOMContentLoaded", async () => {
   const urlParams = new URLSearchParams(window.location.search);
   const blogId = urlParams.get("id");
 
-  function openModal(imageUrl) {
+  function openModal(imageUrl, altText) {
     modal.style.display = "flex";
     modalImg.src = imageUrl;
+    modalImg.alt = altText;
   }
 
   function closeModal() {
@@ -35,7 +36,7 @@ document.addEventListener("DOMContentLoaded", async () => {
       blogImage.classList.add("blog-image-specific");
 
       blogImage.addEventListener("click", () => {
-        openModal(blog.image);
+        openModal(blog.image, blog.altText);
       });
 
       const blogName = document.createElement("h2");
