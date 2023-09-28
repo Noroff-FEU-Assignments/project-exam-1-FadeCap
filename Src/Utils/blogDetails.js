@@ -12,6 +12,15 @@ document.addEventListener("DOMContentLoaded", async () => {
   const urlParams = new URLSearchParams(window.location.search);
   const blogId = urlParams.get("id");
 
+  function openModal(imageUrl) {
+    modal.style.display = "flex";
+    modalImg.src = imageUrl;
+  }
+
+  function closeModal() {
+    modal.style.display = "none";
+  }
+
   const renderBlogDetail = async (blogId) => {
     try {
       const blog = await getBlogById(blogId);
@@ -24,6 +33,10 @@ document.addEventListener("DOMContentLoaded", async () => {
       blogImage.src = blog.image;
       blogImage.classList.add("blog-image-specific");
 
+      blogImage.addEventListener("click", () => {
+        openModal(blog.image);
+      });
+
       const blogName = document.createElement("h2");
       blogName.classList.add("blog-title-specific");
       blogName.innerHTML = blog.title;
@@ -35,11 +48,23 @@ document.addEventListener("DOMContentLoaded", async () => {
       blogDetailContainer.appendChild(blogImage);
       blogDetailContainer.appendChild(blogName);
       blogDetailContainer.appendChild(blogContent);
-
     } catch (error) {
       console.error("Error occurred while trying to get blog detail.\n", error);
     }
   };
 
   renderBlogDetail(blogId);
+
+  // Modal
+  const modal = document.getElementById("myModal");
+  const modalImg = document.getElementById("modalImg");
+  const closeBtn = document.querySelector(".close");
+  closeBtn.addEventListener("click", closeModal);
+
+//  Close when clicking outside image (modal)
+  window.addEventListener("click", (event) => {
+    if (event.target === modal) {
+      closeModal();
+    }
+  });
 });
