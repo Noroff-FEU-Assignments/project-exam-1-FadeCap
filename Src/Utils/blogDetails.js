@@ -3,6 +3,7 @@ import getBlogById from "./getBlogById.js";
 document.addEventListener("DOMContentLoaded", async () => {
   const blogDetailContainer = document.getElementById("blog-detail-container");
 
+  
   // Loader
   const loaderImage = new Image();
   loaderImage.classList.add("big-loader");
@@ -29,6 +30,9 @@ document.addEventListener("DOMContentLoaded", async () => {
       blogDetailContainer.removeChild(loaderImage);
 
       blogDetailContainer.dataset.blogId = blog.id;
+
+      const blogTitleChange = document.getElementById("blogTitle")
+      blogTitleChange.innerHTML = "FadeDisc | " + blog.title;
 
       const blogImage = document.createElement("img");
       blogImage.src = blog.image;
