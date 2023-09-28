@@ -34,6 +34,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     const blogImage = document.createElement("img");
     blogImage.src = blog.image;
+    blogImage.alt = blog.altText;
     blogImage.classList.add("blog-image");
 
     const blogName = document.createElement("h2");

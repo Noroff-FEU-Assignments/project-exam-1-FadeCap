@@ -31,6 +31,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
       const blogImage = document.createElement("img");
       blogImage.src = blog.image;
+      blogImage.alt = blog.altText
       blogImage.classList.add("blog-image-specific");
 
       blogImage.addEventListener("click", () => {
@@ -56,7 +57,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   renderBlogDetail(blogId);
 
   // Modal
-  const modal = document.getElementById("myModal");
+  const modal = document.getElementById("pageModal");
   const modalImg = document.getElementById("modalImg");
   const closeBtn = document.querySelector(".close");
   closeBtn.addEventListener("click", closeModal);
