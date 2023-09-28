@@ -6,13 +6,13 @@ document.addEventListener("DOMContentLoaded", async () => {
   loadMoreBtn.classList.add("load-more-btn");
   loadMoreBtn.textContent = "Load More...";
 
-// Loader - Big
+  // Loader - Big
   const loaderImage = new Image();
   loaderImage.classList.add("big-loader");
   loaderImage.src = "../../Assets/Images/Ripple-loader-big.svg";
   root.appendChild(loaderImage);
 
-// Redirect to blog specific page
+  // Redirect to blog specific page
   const redirectToBlogDetail = (blogId) => {
     window.location.href = `blog-detail.html?id=${blogId}`;
   };
@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   let totalBlogs = 0;
   let blogs = [];
 
-// Creating card for blogs
+  // Creating card for blogs
 
   const createCard = (blog) => {
     const articleElement = document.createElement("article");
@@ -86,7 +86,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     }
   };
 
-// Show the last two blogs
+  // Show the last two blogs
   const loadMoreBlogs = () => {
     for (
       let i = displayedBlogs;

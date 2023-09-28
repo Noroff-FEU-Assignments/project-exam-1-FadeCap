@@ -18,89 +18,128 @@
       })(window, document, "https://static.hotjar.com/c/hotjar-", ".js?sv=");
     </script>
     <!-- End of Hotjar Tracking Code for Project-Exam-Semester-1-Stian -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;900&display=swap"
+      rel="stylesheet"
+    />
     <script src="/Src/Utils/contactValidation.js" defer></script>
 
-    <meta name="description" content="The contact page of FadeDisc.eu">
+    <meta name="description" content="The contact page of FadeDisc.eu" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="contact.css">
-    <link rel="stylesheet" href="/Style/global.css">
+    <link rel="stylesheet" href="contact.css" />
+    <link rel="stylesheet" href="/Style/global.css" />
     <title>FadeDisc | Contact</title>
   </head>
   <body>
     <header class="header">
       <div class="logo">
         <a href="index.html">
-          <img class="logo-image" src="/Assets/Images/disc-logo.png" alt="The logo of FadeDisc.eu, it's an image of a frisbee disc">
+          <img
+            class="logo-image"
+            src="/Assets/Images/disc-logo.png"
+            alt="The logo of FadeDisc.eu, it's an image of a frisbee disc"
+          />
         </a>
-          <div class="line hidden-desktop"></div>
+        <div class="line hidden-desktop"></div>
+      </div>
+      <nav class="navbar">
+        <div class="nav-links">
+          <a class="nav-text" href="../">Home</a>
+          <img
+            class="nav-line hidden-mobile"
+            src="/Assets/Images/Line-mobile-header.png"
+            alt=" mobile to seperate nav links"
+          />
+          <a class="nav-text" href="/blog-list/">Blogs</a>
+          <img
+            class="nav-line hidden-mobile"
+            src="/Assets/Images/Line-mobile-header.png"
+            alt="line to seperate nav links"
+          />
+          <a class="nav-text" href="/About/">About</a>
+          <img
+            class="nav-line hidden-mobile"
+            src="/Assets/Images/Line-mobile-header.png"
+            alt="line to seperate nav links"
+          />
+          <a class="nav-text">Contact</a>
         </div>
-        <nav class="navbar">
-          <div class="nav-links">
-              <a class="nav-text" href="../">Home</a>
-              <img class="nav-line hidden-mobile" src="/Assets/Images/Line-mobile-header.png" alt=" mobile to seperate nav links">
-              <a class="nav-text" href="/blog-list/">Blogs</a>
-              <img class="nav-line hidden-mobile" src="/Assets/Images/Line-mobile-header.png" alt="line to seperate nav links">
-              <a class="nav-text" href="/About/">About</a>
-              <img class="nav-line hidden-mobile" src="/Assets/Images/Line-mobile-header.png" alt="line to seperate nav links">
-              <a class="nav-text">Contact</a>
-          </div>
       </nav>
-      </header>
+    </header>
 
     <main>
       <div class="contact-container">
         <h1 class="contact-title">Contact Us</h1>
-     <form id="contactForm" class="blog-container" onsubmit="return validateForm()">
-         <label for="name">Name:</label>
-         <input type="text" id="name" name="name" required>
-         <br>
-         <div id="nameError" class="error"></div>
- 
-         <label for="email">Email Address:</label>
-         <input type="email" id="email" name="email" required>
-         <br>
-         <div id="emailError" class="error"></div>
- 
-         <label for="subject">Subject:</label>
-         <input type="text" id="subject" name="subject" required>
-         <br>
-         <div id="subjectError" class="error"></div>
- 
-         <label for="message">Message Content:</label>
-         <textarea id="message" name="message" required></textarea>
-         <br>
-         <div id="messageError" class="error"></div>
-         
-         <input type="submit" value="Submit"/>
+        <form
+          id="contactForm"
+          class="blog-container"
+          onsubmit="return validateForm()"
+        >
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required />
+          <br />
+          <div id="nameError" class="error"></div>
+
+          <label for="email">Email Address:</label>
+          <input type="email" id="email" name="email" required />
+          <br />
+          <div id="emailError" class="error"></div>
+
+          <label for="subject">Subject:</label>
+          <input type="text" id="subject" name="subject" required />
+          <br />
+          <div id="subjectError" class="error"></div>
+
+          <label for="message">Message Content:</label>
+          <textarea id="message" name="message" required></textarea>
+          <br />
+          <div id="messageError" class="error"></div>
+
+          <input type="submit" value="Submit" />
         </form>
       </div>
-       <!-- Back to top button -->
-       <button class="scrollToTopBtn"><img class="to-top-arrow" src="/Assets/Images/scroll-to-top-button-arrow.svg" alt="Scroll to top button"></button>
-      
+      <!-- Back to top button -->
+      <button class="scrollToTopBtn">
+        <img
+          class="to-top-arrow"
+          src="/Assets/Images/scroll-to-top-button-arrow.svg"
+          alt="Scroll to top button"
+        />
+      </button>
     </main>
     <footer>
       <div class="social-icons-footer">
         <div class="facebook social-logo">
           <a href="https://www.facebook.com/">
-            <img class="social-icon" src="../Assets/Images/facebook-logo.svg" alt="Facebook logo">
+            <img
+              class="social-icon"
+              src="../Assets/Images/facebook-logo.svg"
+              alt="Facebook logo"
+            />
           </a>
         </div>
         <div class="instagram social-logo">
           <a href="https://www.instagram.com">
-            <img class="social-icon" src="../Assets/Images/instagram-logo.svg" alt="Instagram logo">
+            <img
+              class="social-icon"
+              src="../Assets/Images/instagram-logo.svg"
+              alt="Instagram logo"
+            />
           </a>
         </div>
         <div class="x-twitter social-logo">
           <a href="https://www.twitter.com">
-            <img class="social-icon" src="../Assets/Images/x-twitter-logo.svg" alt="X logo (twitter)">
+            <img
+              class="social-icon"
+              src="../Assets/Images/x-twitter-logo.svg"
+              alt="X logo (twitter)"
+            />
           </a>
         </div>
       </div>
     </footer>
-
   </body>
 </html>

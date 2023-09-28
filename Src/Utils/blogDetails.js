@@ -61,7 +61,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   const closeBtn = document.querySelector(".close");
   closeBtn.addEventListener("click", closeModal);
 
-//  Close when clicking outside image (modal)
+  //  Close when clicking outside image (modal)
   window.addEventListener("click", (event) => {
     if (event.target === modal) {
       closeModal();

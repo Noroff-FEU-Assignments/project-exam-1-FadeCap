@@ -10,7 +10,7 @@ const getBlogs = async () => {
         Authorization:
           "Basic " + btoa(apiConsumerKey + ":" + apiConsumerSecret),
       },
-    })
+    });
     if (!response.ok) {
       const { status, statusText, url } = response;
       throw new Error(JSON.stringify({ status, statusText, url }));
@@ -23,7 +23,7 @@ const getBlogs = async () => {
       title: fields.title.rendered,
       content: fields.content.rendered,
       mediaLink: fields._links["wp:featuredmedia"][0].href,
-      description: fields.excerpt.rendered
+      description: fields.excerpt.rendered,
     }));
 
     for (let i = 0; i < blogData.length; i++) {
@@ -45,6 +45,4 @@ const getBlogs = async () => {
   }
 };
 
-
 export default getBlogs;
-

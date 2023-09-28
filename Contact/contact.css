@@ -37,11 +37,9 @@
     align-items: center;
   }
 
-
-
   #contactForm {
     padding: 2rem 2rem;
-    min-width: 200px
+    min-width: 200px;
   }
 
   #name,
