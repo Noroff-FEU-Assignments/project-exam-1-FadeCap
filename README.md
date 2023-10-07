@@ -25,9 +25,12 @@ In this project I used wordpress REST API to fetch and display the blog posts I 
 
 ## Built With
 
-- HTML
-- CSS
+- Semantic HTML5 markup
+- CSS custom properties
+- Flexbox
+- Mobile-first workflow
 - Javascript
+- DOM manipulation
 
 ## Getting Started
 
