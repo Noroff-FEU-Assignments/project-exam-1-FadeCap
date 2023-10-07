@@ -33,8 +33,6 @@ In this project I used wordpress REST API to fetch and display the blog posts I 
 
 ### Installing
 
-This is where you list how to get the project started. It typically just includes telling a person to clone the repo and then to install the dependencies e.g.
-
 1. Clone the repo:
 
 ```bash
